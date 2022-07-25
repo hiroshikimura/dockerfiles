@@ -16,6 +16,6 @@ RUN sh -c 'echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/
 #    yes | unzip chromedriver_linux64.zip && \
 #    mv -v chromedriver /usr/local/bin/chromedriver
 
-USER www
-WORKDIR /home/www
+#USER www
+#WORKDIR /home/www
 

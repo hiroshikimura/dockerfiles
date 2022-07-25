@@ -11,10 +11,10 @@ RUN sh -c 'echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/
     apt-get update -qq && \
     apt-get install -y nodejs yarn && \
     apt-get -y install google-chrome-stable
-RUN CHROMEVER=`google-chrome --version | sed 's/Google Chrome //' | sed 's/\s//'` && \
-    wget "https://chromedriver.storage.googleapis.com/`curl https://chromedriver.storage.googleapis.com/LATEST_RELEASE_${CHROMEVER%.*}`/chromedriver_linux64.zip" && \
-    yes | unzip chromedriver_linux64.zip && \
-    mv -v chromedriver /usr/local/bin/chromedriver
+#RUN CHROMEVER=`google-chrome --version | sed 's/Google Chrome //' | sed 's/\s//'` && \
+#    wget "https://chromedriver.storage.googleapis.com/`curl https://chromedriver.storage.googleapis.com/LATEST_RELEASE_${CHROMEVER%.*}`/chromedriver_linux64.zip" && \
+#    yes | unzip chromedriver_linux64.zip && \
+#    mv -v chromedriver /usr/local/bin/chromedriver
 
 USER www
 WORKDIR /home/www
